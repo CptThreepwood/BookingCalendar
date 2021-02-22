@@ -1,0 +1,49 @@
+.CalendarMonth {
+    margin: 10px 0;
+}
+
+.CalendarDay__blocked_calendar {
+    background: #e4e5e6;
+    border: 1px solid #e4e5e6;
+}
+
+.CalendarDay:not(.CalendarDay__hovered_span) > div.BedsBooked__1 {
+    background: #ffffcc;
+}
+
+.CalendarDay:not(.CalendarDay__hovered_span) > div.BedsBooked__2 {
+    background: #ffeda0;
+}
+
+.CalendarDay:not(.CalendarDay__hovered_span) > div.BedsBooked__3 {
+    background: #fed976;
+}
+
+.CalendarDay:not(.CalendarDay__hovered_span) > div.BedsBooked__4 {
+    background: #feb24c;
+}
+
+.CalendarDay:not(.CalendarDay__hovered_span) > div.BedsBooked__5 {
+    background: #fd8d3c;
+}
+
+.CalendarDay:not(.CalendarDay__hovered_span) > div.BedsBooked__6 {
+    background: #fc4e2a;
+    color: #f8f8f8;
+}
+
+.CalendarDay:not(.CalendarDay__hovered_span) > div.BedsBooked__7 {
+    background: #e31a1c;
+    color: #f8f8f8;
+}
+
+.CalendarDay:not(.CalendarDay__hovered_span) > div.BedsBooked__8 {
+    background: #b10026;
+    color: #f8f8f8;
+}
+
+.DayPicker {
+    /* This is a hack to make Safari work */
+    /* To be fair, Safari is actually obeying the spec more accurately */
+    min-height: calc(100vh - 170px);
+}

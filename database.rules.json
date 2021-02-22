@@ -1,0 +1,26 @@
+{
+  "rules": {
+    "users": {
+      ".read": "auth.token.hasAdminAccess === true",
+      "$user_id": {
+        ".read": "$user_id === auth.uid",
+        ".write": "$user_id === auth.uid",
+        "bookings": {
+          ".write": "auth.token.hasAdminAccess === true"
+        }
+      }
+    },
+    "calendar": {
+      ".read": "auth.token.hasCalendarAccess === true",
+      "$year": {
+        "$month": {
+          "$day": {
+            "$dayBooking": {
+              ".write": "auth.token.hasCalendarAccess === true && (auth.token.hasAdminAccess === true || newData.child('userID').val() === auth.uid || data.child('userID').val() === auth.uid)"
+            }
+          }
+        }
+      }
+    }
+  }
+}
